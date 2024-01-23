@@ -8,17 +8,42 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+  @State var subtitleContents = "// placeholder text"
+  @State var openFileDialog = false
+  
+  var body: some View {
+    Text("Boba Titles")
+      .fontWeight(.semibold)
+      .padding(.top, 6)
+      .ignoresSafeArea()
+    
+    VStack {
+      Button("Open Subtitle File") {
+        openFileDialog = true
+      }
+      .fileImporter(
+        isPresented: $openFileDialog,
+        allowedContentTypes: [.text],
+        allowsMultipleSelection: false,
+        onCompletion: { result in
+          switch result {
+          case .success(let url):
+            subtitleContents = ReadSubtitleFile(fileURLs: url)
+          case .failure(let error):
+            print(error)
+          }
         }
-        .padding()
+      )
+      HStack {
+        TextDisplay(text: subtitleContents)
+        TextDisplay(text: TransformSubtitles(subtitles: subtitleContents))
+      }
     }
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
+  }
 }
 
 #Preview {
-    ContentView()
+  ContentView()
+    .preferredColorScheme(.dark)
 }

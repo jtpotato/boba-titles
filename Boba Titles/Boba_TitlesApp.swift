@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct Boba_TitlesApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(VisualEffect().ignoresSafeArea())
+        .preferredColorScheme(.dark)
     }
+    .windowStyle(.hiddenTitleBar)
+  }
 }

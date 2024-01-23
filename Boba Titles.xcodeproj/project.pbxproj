@@ -11,6 +11,10 @@
 		2F91C7AC2B5F727500097C4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F91C7AB2B5F727500097C4E /* ContentView.swift */; };
 		2F91C7AE2B5F727600097C4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F91C7AD2B5F727600097C4E /* Assets.xcassets */; };
 		2F91C7B12B5F727600097C4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F91C7B02B5F727600097C4E /* Preview Assets.xcassets */; };
+		2FF8E9392B5F763100DCB776 /* TextDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8E9382B5F763100DCB776 /* TextDisplay.swift */; };
+		2FF8E9422B5F82B300DCB776 /* WindowBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8E9412B5F82B300DCB776 /* WindowBackground.swift */; };
+		2FF8E9442B5F861200DCB776 /* OpenSubtitleFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8E9432B5F861200DCB776 /* OpenSubtitleFile.swift */; };
+		2FF8E9462B5F940D00DCB776 /* TransformSubtitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8E9452B5F940D00DCB776 /* TransformSubtitles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		2F91C7AD2B5F727600097C4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F91C7B02B5F727600097C4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2F91C7B22B5F727600097C4E /* Boba_Titles.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Boba_Titles.entitlements; sourceTree = "<group>"; };
+		2FF8E9382B5F763100DCB776 /* TextDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDisplay.swift; sourceTree = "<group>"; };
+		2FF8E9412B5F82B300DCB776 /* WindowBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowBackground.swift; sourceTree = "<group>"; };
+		2FF8E9432B5F861200DCB776 /* OpenSubtitleFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSubtitleFile.swift; sourceTree = "<group>"; };
+		2FF8E9452B5F940D00DCB776 /* TransformSubtitles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformSubtitles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +62,13 @@
 			children = (
 				2F91C7A92B5F727500097C4E /* Boba_TitlesApp.swift */,
 				2F91C7AB2B5F727500097C4E /* ContentView.swift */,
+				2FF8E9432B5F861200DCB776 /* OpenSubtitleFile.swift */,
+				2FF8E9412B5F82B300DCB776 /* WindowBackground.swift */,
 				2F91C7AD2B5F727600097C4E /* Assets.xcassets */,
 				2F91C7B22B5F727600097C4E /* Boba_Titles.entitlements */,
 				2F91C7AF2B5F727600097C4E /* Preview Content */,
+				2FF8E9382B5F763100DCB776 /* TextDisplay.swift */,
+				2FF8E9452B5F940D00DCB776 /* TransformSubtitles.swift */,
 			);
 			path = "Boba Titles";
 			sourceTree = "<group>";
@@ -85,6 +97,8 @@
 			dependencies = (
 			);
 			name = "Boba Titles";
+			packageProductDependencies = (
+			);
 			productName = "Boba Titles";
 			productReference = 2F91C7A62B5F727500097C4E /* Boba Titles.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +127,8 @@
 				Base,
 			);
 			mainGroup = 2F91C79D2B5F727500097C4E;
+			packageReferences = (
+			);
 			productRefGroup = 2F91C7A72B5F727500097C4E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +156,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F91C7AC2B5F727500097C4E /* ContentView.swift in Sources */,
+				2FF8E9422B5F82B300DCB776 /* WindowBackground.swift in Sources */,
+				2FF8E9442B5F861200DCB776 /* OpenSubtitleFile.swift in Sources */,
+				2FF8E9392B5F763100DCB776 /* TextDisplay.swift in Sources */,
+				2FF8E9462B5F940D00DCB776 /* TransformSubtitles.swift in Sources */,
 				2F91C7AA2B5F727500097C4E /* Boba_TitlesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
