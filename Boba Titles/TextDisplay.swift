@@ -12,14 +12,6 @@ struct TextDisplay: View {
   
   var body: some View {
     ZStack(alignment: .topTrailing) {
-      Button(action: {
-        NSPasteboard.general.clearContents()
-        NSPasteboard.general.setString(text, forType: .string)
-      }) {
-        Image(systemName: "doc.on.clipboard")
-      }
-      .padding(8)
-      .buttonStyle(CopyButton())
       ScrollView {
         Text("\(text)")
           .frame(maxWidth: .infinity)
@@ -29,6 +21,15 @@ struct TextDisplay: View {
           .padding(.trailing, 20)
           .multilineTextAlignment(.leading)
       }
+      
+      Button(action: {
+        NSPasteboard.general.clearContents()
+        NSPasteboard.general.setString(text, forType: .string)
+      }) {
+        Image(systemName: "doc.on.clipboard")
+      }
+      .padding(8)
+      .buttonStyle(CopyButton())
     }
     .background(
       RoundedRectangle(cornerRadius: 8)

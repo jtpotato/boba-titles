@@ -7,12 +7,19 @@
 
 var DefaultTextStyle = """
 const textDefaults = {
-  fontSize: 40,
-  fill: "#fff",
+  fontSize: 50,
+  fill: "#171717",
   fontFamily: "monospace",
+}
+"""
+
+var DefaultRectStyle = """
+const rectDefaults = {
+  fill: "#42ADFF",
+  layout: true,
+  padding: 16,
+  radius: 14,
+  paddingBottom: 10,
   opacity: 0,
-  x: 0,
-  stroke: "#fa0",
-  lineWidth: 2
 }
 """

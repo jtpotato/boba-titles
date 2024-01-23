@@ -48,31 +48,32 @@ func TransformSubtitles(subtitles: String) -> String {
     return nil
   }
   
-  let refList = subtitleLines.map({ line in
-    return "const \(line.uniqueID) = createRef<Txt>()"
-  }).joined(separator: "\n")
-  
   let componentList = subtitleLines.map({ line in
-    return "<Txt text={\"\(line.contents)\"} ref={\(line.uniqueID)} {...textDefaults} />"
+    return """
+    <Rect ref={textRefMap.\(line.uniqueID)} {...rectDefaults}>
+      <Txt text={\"\(line.contents)\"} {...textDefaults} />
+    </Rect>
+    """
   }).joined(separator: "\n")
   
   let animationList = subtitleLines.map({ line in
     return  """
-            delay(\(line.startTime), \(line.uniqueID)().y(700, 0).to(400, 0.2)),
-            delay(\(line.startTime), \(line.uniqueID)().opacity(1, 0.2)),
-            delay(\(line.startTime + line.deltaTime()), \(line.uniqueID)().y(700, 0.2)),
-            delay(\(line.startTime + line.deltaTime()), \(line.uniqueID)().opacity(0, 0.2)),
+            delay(\(line.startTime), textRefMap.\(line.uniqueID)().y(700, 0).to(400, 0.2)),
+            delay(\(line.startTime), textRefMap.\(line.uniqueID)().opacity(1, 0.2)),
+            delay(\(line.startTime + line.deltaTime()), textRefMap.\(line.uniqueID)().y(700, 0.2)),
+            delay(\(line.startTime + line.deltaTime()), textRefMap.\(line.uniqueID)().opacity(0, 0.2)),
             """
   }).joined(separator: "\n")
   
   let motionCanvasFile = """
-  import {makeScene2D, Txt} from '@motion-canvas/2d';
-  import {createRef, delay, all} from '@motion-canvas/core';
+  import {makeScene2D, Txt, Rect} from '@motion-canvas/2d';
+  import {createRefMap, delay, all} from '@motion-canvas/core';
   
   export default makeScene2D(function* (view) {
-    \(refList)
+    const textRefMap = createRefMap<Rect>()
   
     \(DefaultTextStyle)
+    \(DefaultRectStyle)
   
     view.add(
     <>
