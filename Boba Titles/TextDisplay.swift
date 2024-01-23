@@ -11,13 +11,24 @@ struct TextDisplay: View {
   let text: String
   
   var body: some View {
-    ScrollView {
-      Text("\(text)")
-        .foregroundColor(.white)
-        .monospaced()
-        .frame(minWidth: 200)
-        .padding()
-        .multilineTextAlignment(.leading)
+    ZStack(alignment: .topTrailing) {
+      Button(action: {
+        NSPasteboard.general.clearContents()
+        NSPasteboard.general.setString(text, forType: .string)
+      }) {
+        Image(systemName: "doc.on.clipboard")
+      }
+      .padding(8)
+      .buttonStyle(CopyButton())
+      ScrollView {
+        Text("\(text)")
+          .frame(maxWidth: .infinity)
+          .foregroundColor(.white)
+          .monospaced()
+          .padding()
+          .padding(.trailing, 20)
+          .multilineTextAlignment(.leading)
+      }
     }
     .background(
       RoundedRectangle(cornerRadius: 8)
@@ -29,7 +40,7 @@ struct TextDisplay: View {
 }
 
 #Preview {
-  TextDisplay(text: "This is a test.")
+  TextDisplay(text: "A lot and a lot of preview text goes here. There should be an entire movie script here. Maybe it could be about bees. And it starts off with a bee...")
     .padding(16)
     .preferredColorScheme(.dark)
 }
