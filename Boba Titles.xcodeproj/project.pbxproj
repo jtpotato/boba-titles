@@ -15,6 +15,8 @@
 		2FF8E9422B5F82B300DCB776 /* WindowBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8E9412B5F82B300DCB776 /* WindowBackground.swift */; };
 		2FF8E9442B5F861200DCB776 /* OpenSubtitleFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8E9432B5F861200DCB776 /* OpenSubtitleFile.swift */; };
 		2FF8E9462B5F940D00DCB776 /* TransformSubtitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8E9452B5F940D00DCB776 /* TransformSubtitles.swift */; };
+		2FF8E9482B5F9A6600DCB776 /* MotionCanvasStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8E9472B5F9A6600DCB776 /* MotionCanvasStyles.swift */; };
+		2FF8E94A2B5FA8FB00DCB776 /* CopyButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8E9492B5FA8FB00DCB776 /* CopyButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		2FF8E9412B5F82B300DCB776 /* WindowBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowBackground.swift; sourceTree = "<group>"; };
 		2FF8E9432B5F861200DCB776 /* OpenSubtitleFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSubtitleFile.swift; sourceTree = "<group>"; };
 		2FF8E9452B5F940D00DCB776 /* TransformSubtitles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformSubtitles.swift; sourceTree = "<group>"; };
+		2FF8E9472B5F9A6600DCB776 /* MotionCanvasStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionCanvasStyles.swift; sourceTree = "<group>"; };
+		2FF8E9492B5FA8FB00DCB776 /* CopyButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +72,9 @@
 				2F91C7B22B5F727600097C4E /* Boba_Titles.entitlements */,
 				2F91C7AF2B5F727600097C4E /* Preview Content */,
 				2FF8E9382B5F763100DCB776 /* TextDisplay.swift */,
+				2FF8E9492B5FA8FB00DCB776 /* CopyButtonStyle.swift */,
 				2FF8E9452B5F940D00DCB776 /* TransformSubtitles.swift */,
+				2FF8E9472B5F9A6600DCB776 /* MotionCanvasStyles.swift */,
 			);
 			path = "Boba Titles";
 			sourceTree = "<group>";
@@ -155,7 +161,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FF8E94A2B5FA8FB00DCB776 /* CopyButtonStyle.swift in Sources */,
 				2F91C7AC2B5F727500097C4E /* ContentView.swift in Sources */,
+				2FF8E9482B5F9A6600DCB776 /* MotionCanvasStyles.swift in Sources */,
 				2FF8E9422B5F82B300DCB776 /* WindowBackground.swift in Sources */,
 				2FF8E9442B5F861200DCB776 /* OpenSubtitleFile.swift in Sources */,
 				2FF8E9392B5F763100DCB776 /* TextDisplay.swift in Sources */,

@@ -12,7 +12,7 @@ struct ContentView: View {
   @State var openFileDialog = false
   
   var body: some View {
-    Text("Boba Titles")
+    Text("🧋 Boba Titles")
       .fontWeight(.semibold)
       .padding(.top, 6)
       .ignoresSafeArea()
@@ -21,6 +21,14 @@ struct ContentView: View {
       Button("Open Subtitle File") {
         openFileDialog = true
       }
+      .buttonStyle(.borderless)
+      .foregroundStyle(.white)
+      .padding(.horizontal, 12)
+      .padding(.vertical, 8)
+      .background(
+        RoundedRectangle(cornerRadius: 8)
+          .fill(.blue.opacity(0.5))
+      )
       .fileImporter(
         isPresented: $openFileDialog,
         allowedContentTypes: [.text],
