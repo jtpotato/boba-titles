@@ -12,11 +12,6 @@ struct ContentView: View {
   @State var openFileDialog = false
   
   var body: some View {
-    Text("🧋 Boba Titles")
-      .fontWeight(.semibold)
-      .padding(.top, 6)
-      .ignoresSafeArea()
-    
     VStack {
       Button("Open Subtitle File") {
         openFileDialog = true
@@ -47,6 +42,8 @@ struct ContentView: View {
         TextDisplay(text: TransformSubtitles(subtitles: subtitleContents))
       }
     }
+    .navigationTitle("🧋 Boba Titles")
+    .padding()
     .frame(maxWidth: .infinity, maxHeight: .infinity)
   }
 }

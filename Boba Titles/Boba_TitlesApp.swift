@@ -13,9 +13,8 @@ struct Boba_TitlesApp: App {
     WindowGroup {
       ContentView()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(VisualEffect().ignoresSafeArea())
+        .background(VisualEffect())
         .preferredColorScheme(.dark)
     }
-    .windowStyle(.hiddenTitleBar)
   }
 }
