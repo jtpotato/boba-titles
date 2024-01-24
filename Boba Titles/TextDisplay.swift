@@ -31,6 +31,7 @@ struct TextDisplay: View {
       .padding(8)
       .buttonStyle(CopyButton())
     }
+    .textSelection(.enabled)
     .background(
       RoundedRectangle(cornerRadius: 8)
         .fill(.white.opacity(0.05))
